@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSS,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="每天进步一点点！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="两栏布局1.float+margin 左侧栏固定宽度向左浮动，右侧主要内容则用margin-left留出左侧栏的宽度，默认宽度为auto，自动填满剩下的宽度。 12345678910111213141516171819202122 &amp;lt;style&amp;gt;    div&amp;#123;        height:500px;      &amp;#125;      #aside&amp;#123;">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="布局">
+<meta property="og:url" content="http://yoursite.com/2020/03/27/布局/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="每天进步一点点！">
+<meta property="og:description" content="两栏布局1.float+margin 左侧栏固定宽度向左浮动，右侧主要内容则用margin-left留出左侧栏的宽度，默认宽度为auto，自动填满剩下的宽度。 12345678910111213141516171819202122 &amp;lt;style&amp;gt;    div&amp;#123;        height:500px;      &amp;#125;      #aside&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-27T03:22:03.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="每天进步一点点！">
+<meta name="twitter:title" content="布局">
+<meta name="twitter:description" content="两栏布局1.float+margin 左侧栏固定宽度向左浮动，右侧主要内容则用margin-left留出左侧栏的宽度，默认宽度为auto，自动填满剩下的宽度。 12345678910111213141516171819202122 &amp;lt;style&amp;gt;    div&amp;#123;        height:500px;      &amp;#125;      #aside&amp;#123;">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2020/03/27/布局/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>布局 | Hexo</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,9 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -289,9 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/27/布局/" itemprop="url">布局</a></h1>
+          <h1 class="post-title" itemprop="name headline">布局</h1>
         
 
         <div class="post-meta">
@@ -341,9 +340,7 @@
       
 
       
-        
-          
-            <h4 id="两栏布局"><a href="#两栏布局" class="headerlink" title="两栏布局"></a>两栏布局</h4><p>1.float+margin</p>
+        <h4 id="两栏布局"><a href="#两栏布局" class="headerlink" title="两栏布局"></a>两栏布局</h4><p>1.float+margin</p>
 <p>左侧栏固定宽度向左浮动，右侧主要内容则用margin-left留出左侧栏的宽度，默认宽度为auto，自动填满剩下的宽度。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> &lt;style&gt;</span><br><span class="line">    div&#123;</span><br><span class="line">        height:500px;</span><br><span class="line">      &#125;</span><br><span class="line">      #aside&#123;</span><br><span class="line">        width:300px;</span><br><span class="line">        background-color:yellow;</span><br><span class="line">        float:left;</span><br><span class="line">      &#125;</span><br><span class="line">      #main&#123;</span><br><span class="line">        background-color:aqua;</span><br><span class="line">        margin-left:300px;</span><br><span class="line">      &#125;</span><br><span class="line">      &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id = &quot;aside&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div id = &quot;main&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
@@ -421,8 +418,6 @@
 <p>（3）解决中间栏内容被覆盖问题时，圣杯布局设置父元素的padding,双飞翼布局在中间栏嵌套一个div,内容放到新的div中，并设置margin，实际上，双飞翼布局就是圣杯布局的改进方案。</p>
 <p>#### </p>
 
-          
-        
       
     </div>
     
@@ -437,318 +432,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/27/miniProgram/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LYP">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/27/miniProgram/" itemprop="url">miniProgram</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-27T09:55:06+08:00">
-                2020-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>小程序的生命周期分为：</p>
-<ol>
-<li>小程序的应用生命周期</li>
-<li>小程序的页面生命周期</li>
-</ol>
-<h4 id="应用生命周期"><a href="#应用生命周期" class="headerlink" title="应用生命周期"></a>应用生命周期</h4><p><img src="https://user-gold-cdn.xitu.io/2020/3/27/171196f88279cc87?w=1225&h=545&f=png&s=273692" alt></p>
-<p>#### </p>
-<ul>
-<li><p>第一次进入小程序的时候，客户端会帮我们初始化小程序的运行环境，同时会从CDN中下载，或者是从本地缓存中拿到小程序的代码包，然后把他注入到运行环境里</p>
-</li>
-<li><p>初始化完毕之后，微信客户端会给逻辑层App.js 的APP实例派发OnLaunch事件，在逻辑层App.js的APP构造器参数里面OnLaunch方法就会被调用</p>
-</li>
-<li><p>进入小程序之后，如果点击了左上角的关闭或者手机Home键离开小程序，这个时候小程序没有被直接销毁，属于进入后台状态，App构造函数参数定义的onHide方法就会被调用</p>
-</li>
-<li><p>再次回到微信/打开小程序，微信客户端会把后台态的小程序唤醒，小程序进入前台状态，调用onshow方法</p>
-</li>
-<li><p>当小程序发生脚本错误，或者API调用失败的话，触发App构造器里面的onError方法，并给onError方法传入一些错误信息</p>
-</li>
-<li><p>globalData表示小程序应用全局的一些数据</p>
-</li>
-</ul>
-<h4 id="页面生命周期"><a href="#页面生命周期" class="headerlink" title="页面生命周期"></a>页面生命周期</h4><p><img src="https://user-gold-cdn.xitu.io/2020/3/27/171197ac0135dea2?w=969&h=480&f=png&s=187063" alt></p>
-<ul>
-<li><p>当我们页面初次加载的时候，微信客户端会给我们在逻辑层所定义的Page实例派发onLoad事件，Page构造器定义的onLoad方法就会被调用，onLoad方法在页面没被销毁之前只会调用一次，在onLoad的回调中我们可以拿到一些当前页面的打开参数</p>
-</li>
-<li><p>当页面显示之后，Page构造器定义的onShow方法就会被调用,有两种情况：一种是小程序后台态切换为前台状态，另一种是从别的页面返回到当前页面时，当前页的onShow方法就会被调用</p>
-</li>
-<li><p>当页面初次渲染完成之后，onReady方法就会被调用，在页面没被销毁之前，都只能调用一次，当onReady触发之后，逻辑层就可以和视图层进行交互了</p>
-</li>
-<li><p>当我们在当前页面的基础上打开一个新的页面时，当前页面触发onHide,</p>
-</li>
-<li><p>如果关闭了当前页的话，会触发onUnload</p>
-</li>
-<li><p>data表示小程序当前页面的数据</p>
-</li>
-</ul>
-<h4 id="双线程"><a href="#双线程" class="headerlink" title="双线程"></a>双线程</h4><ol>
-<li>负责页面视图的View线程</li>
-<li>负责处理数据和服务的AppService线程<img src="https://user-gold-cdn.xitu.io/2020/3/27/1711984221846561?w=1085&h=548&f=png&s=221014" alt></li>
-</ol>
-<p>两者协同工作，完成小程序页面生命周期的调用</p>
-<ul>
-<li><p>小程序首次启动之后，有两个线程，分别是AppService和View线程，他们会同时创建</p>
-</li>
-<li><p>AppService线程创建之后，会依次调用onLoad和onShow方法，在这两个方法内可以请求服务器的数据</p>
-</li>
-<li><p>view线程在初始化完毕之后，会通知AppService线程,AppService线程会给他发送页面的初始化数据，</p>
-</li>
-<li><p>view线程拿到初始化的数据之后，会触发首次渲染，渲染完成之后通知AppService线程，AppService线程进行onReady的调用，之后拿到服务器上调用的数据，把数据发送给view线程的视图层，再次渲染</p>
-</li>
-<li><p>AppService线程也可以通过一些操作触发onHide,onShow，onUnLoad方法</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LYP">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/14/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T23:11:26+08:00">
-                2019-07-14
-              </time>
+              <a href="/2020/03/27/miniProgram/" rel="next" title="miniProgram">
+                <i class="fa fa-chevron-left"></i> miniProgram
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -758,10 +471,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -769,6 +483,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -789,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -841,6 +568,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#两栏布局"><span class="nav-number">1.</span> <span class="nav-text">两栏布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三栏布局"><span class="nav-number">2.</span> <span class="nav-text">三栏布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#圣杯布局"><span class="nav-number">3.</span> <span class="nav-text">圣杯布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双飞翼布局"><span class="nav-number">4.</span> <span class="nav-text">双飞翼布局</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对比圣杯布局-双飞翼布局："><span class="nav-number">4.1.</span> <span class="nav-text">对比圣杯布局/双飞翼布局：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -974,6 +717,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
