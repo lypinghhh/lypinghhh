@@ -602,62 +602,18 @@
 
       
         
-          
-            <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>小程序的生命周期分为：</p>
+          <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>小程序的生命周期分为：</p>
 <ol>
 <li>小程序的应用生命周期</li>
 <li>小程序的页面生命周期</li>
 </ol>
-<h4 id="应用生命周期"><a href="#应用生命周期" class="headerlink" title="应用生命周期"></a>应用生命周期</h4><p><img src="https://user-gold-cdn.xitu.io/2020/3/27/171196f88279cc87?w=1225&h=545&f=png&s=273692" alt></p>
-<p>#### </p>
-<ul>
-<li><p>第一次进入小程序的时候，客户端会帮我们初始化小程序的运行环境，同时会从CDN中下载，或者是从本地缓存中拿到小程序的代码包，然后把他注入到运行环境里</p>
-</li>
-<li><p>初始化完毕之后，微信客户端会给逻辑层App.js 的APP实例派发OnLaunch事件，在逻辑层App.js的APP构造器参数里面OnLaunch方法就会被调用</p>
-</li>
-<li><p>进入小程序之后，如果点击了左上角的关闭或者手机Home键离开小程序，这个时候小程序没有被直接销毁，属于进入后台状态，App构造函数参数定义的onHide方法就会被调用</p>
-</li>
-<li><p>再次回到微信/打开小程序，微信客户端会把后台态的小程序唤醒，小程序进入前台状态，调用onshow方法</p>
-</li>
-<li><p>当小程序发生脚本错误，或者API调用失败的话，触发App构造器里面的onError方法，并给onError方法传入一些错误信息</p>
-</li>
-<li><p>globalData表示小程序应用全局的一些数据</p>
-</li>
-</ul>
-<h4 id="页面生命周期"><a href="#页面生命周期" class="headerlink" title="页面生命周期"></a>页面生命周期</h4><p><img src="https://user-gold-cdn.xitu.io/2020/3/27/171197ac0135dea2?w=969&h=480&f=png&s=187063" alt></p>
-<ul>
-<li><p>当我们页面初次加载的时候，微信客户端会给我们在逻辑层所定义的Page实例派发onLoad事件，Page构造器定义的onLoad方法就会被调用，onLoad方法在页面没被销毁之前只会调用一次，在onLoad的回调中我们可以拿到一些当前页面的打开参数</p>
-</li>
-<li><p>当页面显示之后，Page构造器定义的onShow方法就会被调用,有两种情况：一种是小程序后台态切换为前台状态，另一种是从别的页面返回到当前页面时，当前页的onShow方法就会被调用</p>
-</li>
-<li><p>当页面初次渲染完成之后，onReady方法就会被调用，在页面没被销毁之前，都只能调用一次，当onReady触发之后，逻辑层就可以和视图层进行交互了</p>
-</li>
-<li><p>当我们在当前页面的基础上打开一个新的页面时，当前页面触发onHide,</p>
-</li>
-<li><p>如果关闭了当前页的话，会触发onUnload</p>
-</li>
-<li><p>data表示小程序当前页面的数据</p>
-</li>
-</ul>
-<h4 id="双线程"><a href="#双线程" class="headerlink" title="双线程"></a>双线程</h4><ol>
-<li>负责页面视图的View线程</li>
-<li>负责处理数据和服务的AppService线程<img src="https://user-gold-cdn.xitu.io/2020/3/27/1711984221846561?w=1085&h=548&f=png&s=221014" alt></li>
-</ol>
-<p>两者协同工作，完成小程序页面生命周期的调用</p>
-<ul>
-<li><p>小程序首次启动之后，有两个线程，分别是AppService和View线程，他们会同时创建</p>
-</li>
-<li><p>AppService线程创建之后，会依次调用onLoad和onShow方法，在这两个方法内可以请求服务器的数据</p>
-</li>
-<li><p>view线程在初始化完毕之后，会通知AppService线程,AppService线程会给他发送页面的初始化数据，</p>
-</li>
-<li><p>view线程拿到初始化的数据之后，会触发首次渲染，渲染完成之后通知AppService线程，AppService线程进行onReady的调用，之后拿到服务器上调用的数据，把数据发送给view线程的视图层，再次渲染</p>
-</li>
-<li><p>AppService线程也可以通过一些操作触发onHide,onShow，onUnLoad方法</p>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/27/miniProgram/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -775,7 +731,9 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+            <a id="more"></a>
+
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
