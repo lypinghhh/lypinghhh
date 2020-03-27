@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>up</title>
+    <url>/2020/03/27/up/</url>
+    <content><![CDATA[<h4 id="风物长宜放眼量"><a href="#风物长宜放眼量" class="headerlink" title="风物长宜放眼量"></a>风物长宜放眼量</h4><a id="more"></a>
+
+<p>Good good study，day day up!</p>
+]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>布局</title>
+    <url>/2020/03/27/%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<h4 id="两栏布局"><a href="#两栏布局" class="headerlink" title="两栏布局"></a>两栏布局</h4><p>三栏布局，两栏布局知多少！</p>
+<a id="more"></a>
+
+<p>1.float+margin</p>
+<p>左侧栏固定宽度向左浮动，右侧主要内容则用margin-left留出左侧栏的宽度，默认宽度为auto，自动填满剩下的宽度。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    div&#123;</span><br><span class="line">        height:500px;</span><br><span class="line">      &#125;</span><br><span class="line">      #aside&#123;</span><br><span class="line">        width:300px;</span><br><span class="line">        background-color:yellow;</span><br><span class="line">        float:left;</span><br><span class="line">      &#125;</span><br><span class="line">      #main&#123;</span><br><span class="line">        background-color:aqua;</span><br><span class="line">        margin-left:300px;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"aside"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"main"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>双飞翼两栏版</li>
+</ol>
+<ul>
+<li>左侧固定栏指定一个右侧的100%的负外边距，为整个屏幕的宽度，这就使得main的最左侧可以与屏幕最左侧对齐。</li>
+<li>此时main的宽度是100%，因此需要为其子内容content指定一个左侧的外边距用于空出左侧栏的位置，即左侧栏的宽度300px</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"aside"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"main"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">div&#123;</span><br><span class="line">  height:500px;</span><br><span class="line">&#125;</span><br><span class="line">#aside&#123;</span><br><span class="line">  width:300px;</span><br><span class="line">  background-color:yellow;</span><br><span class="line">  float:left;</span><br><span class="line">  margin-right:-100%;</span><br><span class="line">&#125;</span><br><span class="line">#main&#123;</span><br><span class="line">  width:100%;</span><br><span class="line">  float:left;</span><br><span class="line">&#125;</span><br><span class="line">#content&#123;</span><br><span class="line">  margin-left:300px;</span><br><span class="line">  background-color:aqua;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>绝对定位</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"aside"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"main"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">#aside&#123;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    width:200px;</span><br><span class="line">&#125;</span><br><span class="line">#main&#123;</span><br><span class="line">    margin-left:200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>flex</li>
+<li>BFC</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  .left &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 500px;</span><br><span class="line">    float: left;</span><br><span class="line">    background: #999;</span><br><span class="line">  &#125;</span><br><span class="line">  .main &#123;</span><br><span class="line">    height: 800px;</span><br><span class="line">    background: #aaa;</span><br><span class="line">    //BFC</span><br><span class="line">    overflow: auto;</span><br><span class="line">    color: #fff;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="三栏布局"><a href="#三栏布局" class="headerlink" title="三栏布局"></a>三栏布局</h4><ol>
+<li><p>absolute+margin</p>
+<p>左右侧栏用绝对定位固定在左侧和右侧，中间栏则利用margin-left和margin-right空出左右栏位置来（三个div的顺序可以随意调整）</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//结构</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>Main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>Right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">//样式</span><br><span class="line">       div &#123;</span><br><span class="line">        height: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    .container&#123;</span><br><span class="line">        position: relative;</span><br><span class="line">    &#125;</span><br><span class="line">    .main &#123;</span><br><span class="line">        margin: 0 200px 0 100px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        position: absolute;</span><br><span class="line">        top: 0;</span><br><span class="line">        left: 0;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        position: absolute;</span><br><span class="line">        top: 0;</span><br><span class="line">        right: 0;</span><br><span class="line"></span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点:   理解容易，上手简单，受内部元素影响而破坏布局的概率低，就是比较经得起折腾。<br>缺点：如果中间栏含有最小宽度限制，或是含有宽度的内部元素，当浏览器宽度小到一定程度，会发生层重叠的情况。 </p>
+<ol start="2">
+<li>float 流体布局 (float + margin) </li>
+</ol>
+<p>先左右浮动左右，再中间内容区 margin</p>
+<p>缺点就是主要内容无法最先加载，当页面内容较多时会影响用户体验。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">.left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    height: 200px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line">.main &#123;</span><br><span class="line">    margin-left: 120px;</span><br><span class="line">    margin-right: 220px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">   <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>延申：</p>
+<p>浮动元素是脱离文档流，要做清除浮动</p>
+<p>清除浮动的方案</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.container::after&#123;</span><br><span class="line">    content:'';</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>flex</li>
+</ol>
+<p>主内容区在前，通过order调整顺序</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>Main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>Right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">//样式</span><br><span class="line">  .container&#123;</span><br><span class="line">           display:flex;</span><br><span class="line">           height: 100%;</span><br><span class="line">       &#125;</span><br><span class="line">       .main&#123;</span><br><span class="line">           flex:1;</span><br><span class="line">           background-color: blue;</span><br><span class="line">       &#125;</span><br><span class="line">       .left&#123;</span><br><span class="line">           flex-basis: 200px;</span><br><span class="line">           order: -1;</span><br><span class="line">           background-color: red;</span><br><span class="line">       &#125;</span><br><span class="line">       .right&#123;</span><br><span class="line">           flex-basis: 100px;</span><br><span class="line">     </span><br><span class="line">           background-color: red;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>缺点：</p>
+<p>兼容：不能兼容IE8及以下浏览器。 </p>
+<ol start="4">
+<li>Grid网格布局</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//结构</span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>Main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>Right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	//样式</span><br><span class="line">       .container&#123;</span><br><span class="line">           display: grid;</span><br><span class="line">           width: 100%;</span><br><span class="line">           grid-template-rows: 100px;  /*设置行高 一行*/</span><br><span class="line">           grid-template-columns: 100px auto 200px;  /*设置列数属性 三列*/</span><br><span class="line">       &#125;</span><br><span class="line">       .left&#123;</span><br><span class="line">           background: red;</span><br><span class="line">       &#125;</span><br><span class="line">       .main&#123;</span><br><span class="line">           background: blue;</span><br><span class="line">       &#125;</span><br><span class="line">       .right&#123;</span><br><span class="line">           background:red;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>table</p>
+<p>父元素display: table;并且宽度为100%,每一个子元素display: table-cell;,左右两侧添加宽度，中间不加宽度</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">.container&#123;</span><br><span class="line">            display: table;</span><br><span class="line">            width:100%;</span><br><span class="line">        &#125;</span><br><span class="line">        .left,.main,.right&#123;</span><br><span class="line">            display: table-cell;</span><br><span class="line">        &#125;</span><br><span class="line">        .left&#123;</span><br><span class="line">            width: 10px;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">        .main&#123;</span><br><span class="line">            background: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        .right&#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h4><p>（float+主内容区padding + 左右margin负外边距）</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//结构</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- center定义在最前面 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"center"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"left"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"right"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">//样式</span><br><span class="line">        body&#123;</span><br><span class="line">            /* 页面的最小宽度200+150+200=550px */</span><br><span class="line">            min-width:550px;</span><br><span class="line">        &#125;</span><br><span class="line">/* 预留左侧的固定宽度,右侧的固定宽度 */</span><br><span class="line">        #container&#123;</span><br><span class="line">            padding-left: 200px;</span><br><span class="line">            padding-right: 150px;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        /* 设置三列浮动 */</span><br><span class="line">        #container .column&#123;</span><br><span class="line">            float:left;</span><br><span class="line">        &#125;</span><br><span class="line">        #center&#123;</span><br><span class="line">            /* 中间栏自适应 */</span><br><span class="line">            width: 100%;</span><br><span class="line">            background-color: teal;</span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">        #left&#123;</span><br><span class="line">            width:200px;</span><br><span class="line">            margin-left:-100%;</span><br><span class="line">            position: relative;</span><br><span class="line">            left:-200px;</span><br><span class="line">            background-color: tomato;</span><br><span class="line">            height: 100px;</span><br><span class="line">        &#125;</span><br><span class="line">        #right&#123;</span><br><span class="line">            width:150px;</span><br><span class="line">            margin-right:-150px;</span><br><span class="line">            background-color: violet;</span><br><span class="line">            height: 150px;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h4><p>（float+margin边距,主内容被包裹，左右margin 负外边距）</p>
+<p> 首先，中间的主体要使用双层标签。外层<code>div</code>宽度<code>100%</code>显示，并且浮动（本例左浮动，下面所述依次为基础），内层<code>div</code>为真正的主体内容，含有左右<code>210</code>像素的<code>margin</code>值。左栏与右栏都是采用<code>margin</code>负值定位的，左栏左浮动，<code>margin-left</code>为<code>-100%</code>，由于前面的div宽度100%与浏览器，所以这里的<code>-100%</code> <code>margin</code>值正好使左栏<code>div</code>定位到了页面的左侧；右侧栏也是左浮动，其<code>margin-left</code>也是负值，大小为其本身的宽度。 </p>
+<p> <code>div</code>的顺序，无论是左浮动还是右浮动，先是主体部分<code>div</code> </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//结构</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"center"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"left"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"right"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">//样式</span><br><span class="line">      #container &#123;</span><br><span class="line">          width: 100%;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      .column &#123;</span><br><span class="line">          float: left;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      #center &#123;</span><br><span class="line">          margin-left: 200px;</span><br><span class="line">          margin-right: 150px;</span><br><span class="line">          background-color: hotpink;</span><br><span class="line">          height: 40px;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      #left &#123;</span><br><span class="line">          width: 200px;</span><br><span class="line">          margin-left: -100%;</span><br><span class="line">          background-color: lavender;</span><br><span class="line">          height: 50px;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      #right &#123;</span><br><span class="line">          width: 150px;</span><br><span class="line">          margin-left: -150px;</span><br><span class="line">          background-color: lightgreen;</span><br><span class="line">          height: 20px;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p> 此方法的优点：三栏相互关联，可谓真正意义上的自适应，有一定的抗性——布局不易受内部影响。<br>缺点在于：相对比较难理解些，上手不容易，代码相对复杂。出现百分比宽度，过多的负值定位，如果出现布局的bug，排查不易。 </p>
+<h5 id="对比圣杯布局-双飞翼布局："><a href="#对比圣杯布局-双飞翼布局：" class="headerlink" title="对比圣杯布局/双飞翼布局："></a>对比圣杯布局/双飞翼布局：</h5><p>（1）都是左右栏定宽，中间栏自适应的三栏布局，中间栏都放到文档流前面，保证先行渲染。</p>
+<p>（2）解决方案基本相似：都是三栏全部设置左浮动float：left,然后分别解决中间栏内容被覆盖的问题。</p>
+<p>（3）解决中间栏内容被覆盖问题时，圣杯布局设置父元素的padding,双飞翼布局在中间栏嵌套一个div,内容放到新的div中，并设置margin，实际上，双飞翼布局就是圣杯布局的改进方案。</p>
+<p>#### </p>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>miniProgram</title>
+    <url>/2020/03/27/miniProgram/</url>
+    <content><![CDATA[<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>小程序的生命周期分为：</p>
+<ol>
+<li>小程序的应用生命周期</li>
+<li>小程序的页面生命周期</li>
+</ol>
+<h4 id="应用生命周期"><a href="#应用生命周期" class="headerlink" title="应用生命周期"></a>应用生命周期</h4><p><img src="https://user-gold-cdn.xitu.io/2020/3/27/171196f88279cc87?w=1225&h=545&f=png&s=273692" alt></p>
+<p>#### </p>
+<ul>
+<li><p>第一次进入小程序的时候，客户端会帮我们初始化小程序的运行环境，同时会从CDN中下载，或者是从本地缓存中拿到小程序的代码包，然后把他注入到运行环境里</p>
+</li>
+<li><p>初始化完毕之后，微信客户端会给逻辑层App.js 的APP实例派发OnLaunch事件，在逻辑层App.js的APP构造器参数里面OnLaunch方法就会被调用</p>
+</li>
+<li><p>进入小程序之后，如果点击了左上角的关闭或者手机Home键离开小程序，这个时候小程序没有被直接销毁，属于进入后台状态，App构造函数参数定义的onHide方法就会被调用</p>
+</li>
+<li><p>再次回到微信/打开小程序，微信客户端会把后台态的小程序唤醒，小程序进入前台状态，调用onshow方法</p>
+</li>
+<li><p>当小程序发生脚本错误，或者API调用失败的话，触发App构造器里面的onError方法，并给onError方法传入一些错误信息</p>
+</li>
+<li><p>globalData表示小程序应用全局的一些数据</p>
+</li>
+</ul>
+<h4 id="页面生命周期"><a href="#页面生命周期" class="headerlink" title="页面生命周期"></a>页面生命周期</h4><p><img src="https://user-gold-cdn.xitu.io/2020/3/27/171197ac0135dea2?w=969&h=480&f=png&s=187063" alt></p>
+<ul>
+<li><p>当我们页面初次加载的时候，微信客户端会给我们在逻辑层所定义的Page实例派发onLoad事件，Page构造器定义的onLoad方法就会被调用，onLoad方法在页面没被销毁之前只会调用一次，在onLoad的回调中我们可以拿到一些当前页面的打开参数</p>
+</li>
+<li><p>当页面显示之后，Page构造器定义的onShow方法就会被调用,有两种情况：一种是小程序后台态切换为前台状态，另一种是从别的页面返回到当前页面时，当前页的onShow方法就会被调用</p>
+</li>
+<li><p>当页面初次渲染完成之后，onReady方法就会被调用，在页面没被销毁之前，都只能调用一次，当onReady触发之后，逻辑层就可以和视图层进行交互了</p>
+</li>
+<li><p>当我们在当前页面的基础上打开一个新的页面时，当前页面触发onHide,</p>
+</li>
+<li><p>如果关闭了当前页的话，会触发onUnload</p>
+</li>
+<li><p>data表示小程序当前页面的数据</p>
+</li>
+</ul>
+<h4 id="双线程"><a href="#双线程" class="headerlink" title="双线程"></a>双线程</h4><ol>
+<li>负责页面视图的View线程</li>
+<li>负责处理数据和服务的AppService线程<img src="https://user-gold-cdn.xitu.io/2020/3/27/1711984221846561?w=1085&h=548&f=png&s=221014" alt></li>
+</ol>
+<p>两者协同工作，完成小程序页面生命周期的调用</p>
+<ul>
+<li><p>小程序首次启动之后，有两个线程，分别是AppService和View线程，他们会同时创建</p>
+</li>
+<li><p>AppService线程创建之后，会依次调用onLoad和onShow方法，在这两个方法内可以请求服务器的数据</p>
+</li>
+<li><p>view线程在初始化完毕之后，会通知AppService线程,AppService线程会给他发送页面的初始化数据，</p>
+</li>
+<li><p>view线程拿到初始化的数据之后，会触发首次渲染，渲染完成之后通知AppService线程，AppService线程进行onReady的调用，之后拿到服务器上调用的数据，把数据发送给view线程的视图层，再次渲染</p>
+</li>
+<li><p>AppService线程也可以通过一些操作触发onHide,onShow，onUnLoad方法</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>wx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/07/14/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
