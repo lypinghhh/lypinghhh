@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>js-手撕</title>
+    <title>JS-手撕[01]</title>
     <url>/2020/03/28/js-%E6%89%8B%E6%92%95/</url>
-    <content><![CDATA[<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><ol>
+    <content><![CDATA[<a id="more"></a>
+
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><ol>
 <li><p>二分查找</p>
 <ul>
 <li>递归</li>
