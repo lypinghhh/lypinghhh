@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="手撕,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="每天进步一点点！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LYP の blog">
-<meta property="og:url" content="http://yoursite.com/tags/wx/index.html">
+<meta name="description" content="算法 二分查找  递归  1234567891011121314151617 function binarySearch(target,arr,start = 0,end = arr.length-1) &amp;#123;    if( start &amp;gt; end)&amp;#123;        return -1    &amp;#125;;    var mid = Math.floor((left+righ">
+<meta name="keywords" content="手撕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-手撕">
+<meta property="og:url" content="http://yoursite.com/2020/03/28/js-手撕/index.html">
 <meta property="og:site_name" content="LYP の blog">
-<meta property="og:description" content="每天进步一点点！">
+<meta property="og:description" content="算法 二分查找  递归  1234567891011121314151617 function binarySearch(target,arr,start = 0,end = arr.length-1) &amp;#123;    if( start &amp;gt; end)&amp;#123;        return -1    &amp;#125;;    var mid = Math.floor((left+righ">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-28T10:15:46.647Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LYP の blog">
-<meta name="twitter:description" content="每天进步一点点！">
+<meta name="twitter:title" content="js-手撕">
+<meta name="twitter:description" content="算法 二分查找  递归  1234567891011121314151617 function binarySearch(target,arr,start = 0,end = arr.length-1) &amp;#123;    if( start &amp;gt; end)&amp;#123;        return -1    &amp;#125;;    var mid = Math.floor((left+righ">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/wx/">
+  <link rel="canonical" href="http://yoursite.com/2020/03/28/js-手撕/">
 
 
 
 
 
-  <title>标签: wx | LYP の blog</title>
+  <title>js-手撕 | LYP の blog</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,52 +271,166 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>wx<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/28/js-手撕/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LYP">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LYP の blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/03/27/miniProgram/" itemprop="url">
-              
-                <span itemprop="name">miniProgram</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">js-手撕</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-27T09:55:06+08:00" content="2020-03-27">
-          03-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-28T18:15:14+08:00">
+                2020-03-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><ol>
+<li><p>二分查找</p>
+<ul>
+<li>递归</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">target,arr,start = <span class="number">0</span>,end = arr.length<span class="number">-1</span></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>( start &gt; end)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">var</span> mid = <span class="built_in">Math</span>.floor((left+right)/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(target==arr[mid])&#123;</span><br><span class="line">        <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(target&gt;arr[mid])&#123;</span><br><span class="line">        <span class="keyword">return</span> binarySearch(target,arr,mid+<span class="number">1</span>,end);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> binarySearch(target,arr,start,mid<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(binarySearch(<span class="number">3</span>,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">9</span>]))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>while循环</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">arr,target</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> right = arr.length<span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right)&#123;</span><br><span class="line">        <span class="comment">//middle的变化写在循环里面</span></span><br><span class="line">        <span class="keyword">var</span> middle = <span class="built_in">parseInt</span>(left+(right-left)/<span class="number">2</span>);</span><br><span class="line">        <span class="comment">// let middle = Math.floor((left+right)/2)</span></span><br><span class="line">        <span class="keyword">if</span>(target &lt; arr[middle])&#123;</span><br><span class="line">            right =  middle <span class="number">-1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(target &gt; arr[middle])&#123;</span><br><span class="line">            left = middle +<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> middle;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 拓展：<a href="https://www.cxyxiaowu.com/8634.html" target="_blank" rel="noopener">二分查找以及左右边界的查找</a> </p>
+</li>
+<li><p>大数相加</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumString</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = <span class="string">''</span>,</span><br><span class="line">        c = <span class="number">0</span>;</span><br><span class="line">        a = a.toString().split(<span class="string">''</span>);</span><br><span class="line">        b = b.toString().split(<span class="string">''</span>);</span><br><span class="line">        <span class="keyword">while</span>(a.length || b.length || c)&#123;</span><br><span class="line">            c += ~~a.pop() + ~~b.pop();</span><br><span class="line">            res = c % <span class="number">10</span> + res;</span><br><span class="line">            c = c&gt;<span class="number">9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> num = <span class="built_in">parseInt</span>(res.replace(<span class="regexp">/^0+/</span>,<span class="string">''</span>));</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(sumString(<span class="number">1234354</span>,<span class="number">32547647</span>))</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.jianshu.com/p/c373943f0e9e" target="_blank" rel="noopener"><strong>js大数相加问题</strong></a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/手撕/" rel="tag"># 手撕</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/27/up/" rel="next" title="up">
+                <i class="fa fa-chevron-left"></i> up
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -322,6 +438,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -342,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -394,6 +523,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -534,6 +679,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
