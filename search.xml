@@ -3,7 +3,8 @@
   <entry>
     <title>LeetCode-Day</title>
     <url>/2020/04/27/LeetCode-Day/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>Gradually!</p>
+<a id="more"></a>
 
 <h4 id="567-字符串的排列-Medium"><a href="#567-字符串的排列-Medium" class="headerlink" title="[567] 字符串的排列 - Medium"></a>[567] 字符串的排列 - Medium</h4><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><ul>
 <li>给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。</li>
